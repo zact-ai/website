@@ -1,86 +1,200 @@
-# Zact Landing Page 🧠
+# Zact - The OS to Run Your Entire Company with AI Agents
 
-```
-\033[38;5;196m
-███████╗ █████╗  ██████╗████████╗
-╚══███╔╝██╔══██╗██╔════╝╚══██╔══╝
-  ███╔╝ ███████║██║        ██║   
- ███╔╝  ██╔══██║██║        ██║   
-███████╗██║  ██║╚██████╗   ██║   
-╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   
-\033[0m
-```
+A modern, responsive landing page for Zact, showcasing the AI agent platform that allows companies to install specialized AI agents as employees.
 
-## The OS to Run Your Entire Company with AI Agents 🧠
+## 🚀 Features
 
-Zact is a modular AI agent platform where every function of your company — from marketing to legal to finance — is run by a specialized AI agent. You assemble your "team" by installing agents, not hiring people.
+- **Modern React + TypeScript** - Built with Vite for fast development
+- **Responsive Design** - Optimized for all devices
+- **Interactive Demo** - Realistic AI agent simulation
+- **Waitlist Integration** - Loops.so integration with fallback
+- **SEO Optimized** - Complete meta tags and structured data
+- **Infinite Scroll** - Smooth agent card animations
+- **Modal System** - Clean waitlist signup experience
 
-### 🧩 Core Concept
+## 🛠️ Tech Stack
 
-- **Founders/Users**: Solo founders, 2-person startups, SMEs, and enterprise teams looking to scale with minimal headcount
-- **Modular Agents as Employees**: Each agent acts like an autonomous employee with a defined role
-- **Complete Company Stack**: Zapier + LangGraph + Retool + OpenAI + Pilot + Deel + Docusign + Salesforce — merged into one seamless agentic stack
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + Custom animations
+- **Icons**: Lucide React
+- **Backend**: Express.js (for Loops.so proxy)
+- **Waitlist**: Loops.so + Web3Forms fallback
+- **Deployment**: Ready for Vercel/Netlify
 
-### 🤖 Available Agents
-
-- **FinanceGPT**: Manages bookkeeping, budgeting, burn rate analysis, creates investor reports
-- **LegalBot**: Drafts contracts, manages compliance, registers entities across jurisdictions
-- **GrowthPilot**: Builds landing pages, runs ads, A/B tests copy, and optimizes CAC automatically
-- **InboxAgent**: Answers sales and support emails, auto-routes leads to CRM
-- **HRAgent**: Manages contractors, payroll, and onboarding through Deel/Remote APIs
-- **ProductManagerGPT**: Creates PRDs, monitors analytics, prioritizes roadmap
-- **SupportAgent**: Trains itself on docs and answers support tickets via Zendesk/Intercom
-
-### 💸 Pricing
-
-- **Freemium**: 2–3 agents + 100 tasks/month
-- **Pro**: $79/month per active agent
-- **Enterprise**: Custom plans with team access, dedicated agent LLMs
-
-### 🚀 Getting Started
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/zact-ai/website.git
+cd website
+
 # Install dependencies
 npm install
 
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your API keys
 ```
 
-### 🛠️ Tech Stack
+## 🔧 Environment Variables
 
-- **Frontend**: React + TypeScript + Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Deployment**: Vercel/Netlify ready
+Create a `.env` file with:
 
-### 📱 Features
+```env
+VITE_LOOPS_API_KEY=your_loops_api_key
+VITE_WEB3FORMS_KEY=your_web3forms_key
+LOOPS_API_KEY=your_loops_api_key
+```
 
-- **Modern UI**: Beautiful, responsive design with attention-grabbing colors
-- **Agent Showcase**: Detailed display of each AI agent's capabilities
-- **Interactive Demos**: Real-world examples of agents working together
-- **Waitlist System**: Collect early access signups with beautiful forms
-- **Mobile Optimized**: Perfect experience on all devices
-- **Performance**: Fast loading with optimized assets
+## 🚀 Development
 
-### 🎯 Target Audience
+```bash
+# Run frontend only
+npm run dev
 
-- Solo founders and indie hackers
-- 2-person startups and lean agencies
-- SMEs with 3-10 employees
-- SaaS companies <$1M ARR
-- Global solopreneurs
+# Run backend only (for Loops.so integration)
+npm run server
 
-### 🎨 UI Updates
+# Run both frontend and backend
+npm run dev:full
+```
 
-- **Updated CTAs**: "Book a Call" and "Join Waitlist" instead of demo/trial buttons
-- **Waitlist Component**: Beautiful form for collecting early access signups
-- **Consistent Messaging**: All CTAs now point to waitlist or booking calls
-- **Agent-Focused**: Every section emphasizes the AI agent concept
+## 📁 Project Structure
+
+```
+zact-landing/
+├── public/                 # Static assets
+│   ├── zactlogo.png       # Zact logo
+│   ├── robots.txt         # SEO
+│   ├── sitemap.xml       # SEO
+│   └── og-image.html     # Social media image
+├── src/
+│   ├── components/        # React components
+│   │   ├── Hero.tsx      # Main hero section
+│   │   ├── Features.tsx  # Features showcase
+│   │   ├── Agents.tsx    # AI agents display
+│   │   ├── Demo.tsx      # Interactive demo
+│   │   ├── CTA.tsx       # Call-to-action
+│   │   ├── Header.tsx    # Navigation
+│   │   ├── Footer.tsx    # Footer
+│   │   └── WaitlistModal.tsx # Waitlist modal
+│   ├── services/         # API services
+│   │   └── waitlistService.ts # Waitlist integration
+│   ├── App.tsx          # Main app component
+│   ├── main.tsx         # Entry point
+│   └── index.css        # Global styles
+├── server.js            # Express backend
+├── index.html           # HTML template
+└── package.json         # Dependencies
+```
+
+## 🎨 Key Components
+
+### Hero Section
+- Compelling headline and description
+- Statistics showcase
+- Call-to-action buttons
+
+### Features
+- Grid layout with icons
+- Feature highlights
+- Responsive design
+
+### Agents Section
+- Infinite horizontal scroll
+- Agent cards with descriptions
+- Installation buttons
+
+### Interactive Demo
+- Realistic AI agent simulation
+- Live metrics display
+- Workflow visualization
+- Chat interface
+
+### Waitlist Modal
+- Clean signup form
+- Loops.so integration
+- Success/error handling
+- Local storage backup
+
+## 🔌 API Integration
+
+### Loops.so Integration
+- Server-side proxy to avoid CORS
+- Contact creation with properties
+- Error handling for duplicates
+- Rate limiting support
+
+### Fallback System
+- Web3Forms as backup
+- Local storage for offline
+- Graceful degradation
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Netlify
+```bash
+# Build the project
+npm run build
+
+# Deploy to Netlify
+# Upload dist/ folder
+```
+
+## 🔧 Customization
+
+### Colors & Branding
+Edit `tailwind.config.js` for brand colors:
+```js
+theme: {
+  extend: {
+    colors: {
+      primary: '#000000',
+      secondary: '#1a1a1a',
+    }
+  }
+}
+```
+
+### Content Updates
+- **Hero**: Edit `src/components/Hero.tsx`
+- **Features**: Edit `src/components/Features.tsx`
+- **Agents**: Edit `src/components/Agents.tsx`
+- **Demo**: Edit `src/components/Demo.tsx`
+
+### SEO
+- **Meta tags**: Edit `index.html`
+- **Structured data**: JSON-LD in `index.html`
+- **Sitemap**: Edit `public/sitemap.xml`
+
+## 📊 Analytics
+
+The site is ready for Google Analytics integration. Add your GA ID to the environment variables.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is proprietary to Zact.
+
+## 🆘 Support
+
+For support, contact the Zact team or create an issue in this repository.
 
 ---
 
-**Built with ❤️ for the AI-first future of work** 
+**Built with ❤️ by the Zact team** 
