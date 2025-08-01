@@ -128,7 +128,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 font-medium">
-            © 2024 ZACT. ALL RIGHTS RESERVED.
+            © 2025 ZACT. ALL RIGHTS RESERVED.
           </p>
           <div className="flex space-x-8 mt-4 md:mt-0">
             <a href="#privacy" className="text-white/60 hover:text-white font-medium transition-colors duration-300">
